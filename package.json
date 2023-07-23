@@ -1,0 +1,27 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "Odin weather API project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codingartist-stack/weatherApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codingartist-stack/weatherApp/issues"
+  },
+  "homepage": "https://github.com/codingartist-stack/weatherApp#readme",
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "wepack-cli": "^0.0.1-security"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
