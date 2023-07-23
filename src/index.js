@@ -12,15 +12,6 @@ document.body.appendChild(check);
 
 const checkLocation = 'montebello';
 
-async function getCurrentWeather() {
-  const response = await fetch(
-    `https://api.weatherapi.com/v1/current.json?key=84aeac0362a74d1d87732615232207&q=${checkLocation}`,
-    { mode: 'cors' }
-  );
-  const locationData = await response.json();
-  console.log(locationData);
-}
-
 async function getForecast() {
   const response = await fetch(
     `https://api.weatherapi.com/v1/forecast.json?key=84aeac0362a74d1d87732615232207&q=${checkLocation}`,
@@ -28,6 +19,7 @@ async function getForecast() {
   );
 
   const locationForecast = await response.json();
+  console.log(locationForecast);
 
   console.log(locationForecast.location.name);
   console.log(locationForecast.location.region);
@@ -40,5 +32,16 @@ async function getForecast() {
   console.log(locationForecast.current.temp_f);
 }
 
-getCurrentWeather();
+const codeTest = 1000;
+
+async function getIcon(codeNumber) {
+  const iconResponse = await fetch(
+    'https://www.weatherapi.com/docs/weather_conditions.json',
+    { mode: 'cors' }
+  );
+  const icons = iconResponse.json();
+  console.log(icons);
+}
+
+getIcon();
 getForecast();
