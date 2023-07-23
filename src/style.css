@@ -67,3 +67,8 @@
   font-family: 'Lato-ThinItalic';
   src: url('./fonts/Lato/Lato-ThinItalic.ttf');
 }
+
+:root {
+  /* color-scheme */
+  margin: 0;
+}
