@@ -1,3 +1,5 @@
+const weatherContainer = document.querySelector('#weatherContainer');
+
 export default async function getForecast(checkLocation) {
   const response = await fetch(
     `https://api.weatherapi.com/v1/forecast.json?key=84aeac0362a74d1d87732615232207&q=${checkLocation}`,

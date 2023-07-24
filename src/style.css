@@ -152,6 +152,7 @@ header {
 .weatherContainer {
   display: grid;
   justify-content: center;
+  padding: 2rem;
 }
 
 .dayContainer {

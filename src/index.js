@@ -13,4 +13,9 @@ const weatherContainer = document.querySelector('#weatherContainer');
 const checkLocation = 'las vegas';
 getForecast(checkLocation);
 
-searchBtn.addEventListener('click', (e) => {});
+searchBtn.addEventListener('click', (e) => {
+  weatherContainer.textContent = ' ';
+  const newCity = searchcity.value;
+  const newCityLowerCase = newCity.toLowerCase();
+  getForecast(newCityLowerCase);
+});
