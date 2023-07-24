@@ -8,6 +8,8 @@ export default async function getForecast(checkLocation) {
 
   const locationForecast = await response.json();
 
+  console.log(locationForecast);
+
   const cityName = locationForecast.location.name;
   const cityRegion = locationForecast.location.region;
   const cityCountry = locationForecast.location.country;
@@ -15,8 +17,10 @@ export default async function getForecast(checkLocation) {
   const forecastCondition = locationForecast.current.condition.text;
   const celsius = locationForecast.current.temp_c;
   const fahrenheit = locationForecast.current.temp_f;
+  const isDayOrNight = locationForecast.current.is_day;
 
-  console.log(locationForecast.location.localtime);
+  console.log(cityLocalTime);
+  console.log(isDayOrNight);
 
   const imageContainer = document.createElement('div');
   imageContainer.classList.add('iconContainer');
