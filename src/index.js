@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import './style.css';
-// import './images/day';
+import './images.json';
 
 const check = document.createElement('h2');
 check.textContent = 'Testing Connection hello';
@@ -31,28 +31,14 @@ async function getForecast() {
   console.log(locationForecast.current.condition.code);
   console.log('celsius: ' + locationForecast.current.temp_c);
   console.log('fahrenheit: ' + locationForecast.current.temp_f);
-}
-
-const codeTest = 1000;
-
-async function getIcon(codeNumber) {
-  const iconResponse = await fetch(
-    'https://www.weatherapi.com/docs/weather_conditions.json',
-    { mode: 'cors' }
-  );
-  const icons = await iconResponse.json();
-  console.log(icons);
-  const weatherIcon = icons.find((e) => e.code === codeNumber);
-
-  console.log(weatherIcon.icon);
 
   const div = document.createElement('div');
   const img = document.createElement('img');
-  // img.src = weatherIcon.icon;
+
+  img.src = locationForecast.current.condition.icon;
+
   div.appendChild(img);
   document.body.appendChild(div);
-  div.textContent = weatherIcon;
 }
 
-getIcon(codeTest);
 getForecast();
