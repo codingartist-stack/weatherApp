@@ -48,29 +48,25 @@ export default async function getForecast(checkLocation) {
   const tempContainer = document.createElement('div');
   tempContainer.classList.add('tempContainer');
 
-  const fahrenheitContainer = document.createElement('h2');
-  fahrenheitContainer.textContent = fahrenheit + ' F\u00B0';
-  fahrenheitContainer.classList.add('temperature');
-  fahrenheitContainer.setAttribute('data-temp-type', 'fahrenheit');
-
-  const celsiusContainer = document.createElement('h2');
-  celsiusContainer.textContent = celsius + ' C\u00B0';
-  celsiusContainer.classList.add('temperature');
-  celsiusContainer.setAttribute('data-temp-type', 'celsius');
-  celsiusContainer.classList.add('hidden');
+  const tempTextContainer = document.createElement('h2');
+  tempTextContainer.textContent = fahrenheit + ' F\u00B0';
+  tempTextContainer.classList.add('temperature');
 
   const changeTempBtn = document.createElement('button');
-  changeTempBtn.textContent = 'Change Temperature Type';
+  changeTempBtn.textContent = 'Change to Celsius';
   changeTempBtn.classList.add('ChangeTempBtn');
 
   changeTempBtn.addEventListener('click', (e) => {
-    debugger;
-    console.log(e.target);
-    console.log(e.target.parentElement);
+    if (tempTextContainer.textContent == fahrenheit + ' F\u00B0') {
+      tempTextContainer.textContent = celsius + ' C\u00B0';
+      changeTempBtn.textContent = 'Change to fahrenheit';
+    } else {
+      tempTextContainer.textContent = fahrenheit + ' F\u00B0';
+      changeTempBtn.textContent = 'Change to Celsius';
+    }
   });
 
-  tempContainer.appendChild(fahrenheitContainer);
-  tempContainer.appendChild(celsiusContainer);
+  tempContainer.appendChild(tempTextContainer);
   tempContainer.appendChild(imageContainer);
   tempContainer.appendChild(changeTempBtn);
 
