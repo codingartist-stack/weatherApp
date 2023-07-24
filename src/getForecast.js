@@ -1,10 +1,5 @@
 const weatherContainer = document.querySelector('#weatherContainer');
 
-function changeTempType(currentTemp, newTemp) {
-  currentTemp.classList.add('hidden');
-  newTemp.classList.remove('hidden');
-}
-
 export default async function getForecast(checkLocation) {
   const response = await fetch(
     `https://api.weatherapi.com/v1/forecast.json?key=84aeac0362a74d1d87732615232207&q=${checkLocation}`,
