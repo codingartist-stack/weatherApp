@@ -1,5 +1,10 @@
 const weatherContainer = document.querySelector('#weatherContainer');
 
+function changeTempType(currentTemp, newTemp) {
+  currentTemp.classList.add('hidden');
+  newTemp.classList.remove('hidden');
+}
+
 export default async function getForecast(checkLocation) {
   const response = await fetch(
     `https://api.weatherapi.com/v1/forecast.json?key=84aeac0362a74d1d87732615232207&q=${checkLocation}`,
@@ -46,14 +51,23 @@ export default async function getForecast(checkLocation) {
   const fahrenheitContainer = document.createElement('h2');
   fahrenheitContainer.textContent = fahrenheit + ' F\u00B0';
   fahrenheitContainer.classList.add('temperature');
+  fahrenheitContainer.setAttribute('data-temp-type', 'fahrenheit');
 
   const celsiusContainer = document.createElement('h2');
   celsiusContainer.textContent = celsius + ' C\u00B0';
   celsiusContainer.classList.add('temperature');
+  celsiusContainer.setAttribute('data-temp-type', 'celsius');
   celsiusContainer.classList.add('hidden');
 
   const changeTempBtn = document.createElement('button');
+  changeTempBtn.textContent = 'Change Temperature Type';
   changeTempBtn.classList.add('ChangeTempBtn');
+
+  changeTempBtn.addEventListener('click', (e) => {
+    debugger;
+    console.log(e.target);
+    console.log(e.target.parentElement);
+  });
 
   tempContainer.appendChild(fahrenheitContainer);
   tempContainer.appendChild(celsiusContainer);
