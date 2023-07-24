@@ -22,6 +22,12 @@ export default async function getForecast(checkLocation) {
   console.log(cityLocalTime);
   console.log(isDayOrNight);
 
+  if (isDayOrNight == 0) {
+    document.body.classList.add('nightMode');
+  } else {
+    document.body.classList.remove('nightMode');
+  }
+
   const imageContainer = document.createElement('div');
   imageContainer.classList.add('iconContainer');
   const iconImage = document.createElement('img');

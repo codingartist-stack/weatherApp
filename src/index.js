@@ -4,7 +4,7 @@ import getForecast from './getForecast';
 
 //search specific location
 
-const searchcity = document.querySelector('#city');
+const searchCity = document.querySelector('#city');
 const searchBtn = document.querySelector('#searchbtn');
 const weatherContainer = document.querySelector('#weatherContainer');
 //toggle fahrenheit or celsius
@@ -15,7 +15,7 @@ getForecast(checkLocation);
 
 searchBtn.addEventListener('click', (e) => {
   weatherContainer.textContent = ' ';
-  const newCity = searchcity.value;
+  const newCity = searchCity.value;
   const newCityLowerCase = newCity.toLowerCase();
   getForecast(newCityLowerCase);
 });
