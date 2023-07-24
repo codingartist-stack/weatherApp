@@ -146,3 +146,13 @@ header {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.weatherContainer {
+  display: grid;
+  justify-content: center;
+}
+
+.dayContainer {
+  background-color: #bbe1fa;
+  border: solid 2px #0f4c75;
+}
