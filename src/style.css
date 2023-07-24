@@ -113,6 +113,10 @@ button:hover {
   font-family: 'LinearIcon', 'Courier New', Courier, monospace;
 }
 
+.hidden {
+  display: none;
+}
+
 #skipToMainContent {
   position: absolute;
   left: 2rem;
@@ -156,8 +160,8 @@ header {
 }
 
 .dayContainer {
-  background-color: #bbe1fa;
-  border: solid 2px #0f4c75;
+  background-color: var(--warm-light-color);
+  border: solid 2px var(--warm-action-color);
   padding: 1rem;
   border-radius: 0.5rem;
   display: grid;
@@ -165,15 +169,23 @@ header {
 }
 
 .tempContainer {
-  display: flex;
+  display: grid;
   align-items: start;
+  grid-template-areas:
+    'temp icon'
+    'btn btn';
 }
 
 .temperature {
   font-size: 5em;
   margin: 0;
+  grid-area: 'temp';
 }
 
-.hidden {
-  display: none;
+.iconContainer {
+  grid-area: icon;
+}
+
+.ChangeTempBtn {
+  grid-area: 'btn';
 }

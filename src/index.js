@@ -10,7 +10,7 @@ const weatherContainer = document.querySelector('#weatherContainer');
 //toggle fahrenheit or celsius
 //change the look of the page based on the data
 
-const checkLocation = 'las vegas';
+const checkLocation = 'paris';
 getForecast(checkLocation);
 
 searchBtn.addEventListener('click', (e) => {

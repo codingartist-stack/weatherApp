@@ -19,6 +19,7 @@ export default async function getForecast(checkLocation) {
   console.log(locationForecast.location.localtime);
 
   const imageContainer = document.createElement('div');
+  imageContainer.classList.add('iconContainer');
   const iconImage = document.createElement('img');
   iconImage.classList.add('icon');
   imageContainer.appendChild(iconImage);
@@ -51,9 +52,13 @@ export default async function getForecast(checkLocation) {
   celsiusContainer.classList.add('temperature');
   celsiusContainer.classList.add('hidden');
 
+  const changeTempBtn = document.createElement('button');
+  changeTempBtn.classList.add('ChangeTempBtn');
+
   tempContainer.appendChild(fahrenheitContainer);
   tempContainer.appendChild(celsiusContainer);
   tempContainer.appendChild(imageContainer);
+  tempContainer.appendChild(changeTempBtn);
 
   const forecastConditionContainer = document.createElement('p');
   forecastConditionContainer.textContent = forecastCondition;
