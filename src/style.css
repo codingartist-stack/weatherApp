@@ -73,14 +73,14 @@
   margin: 0;
   scroll-behavior: smooth;
 
-  --lightest-color: #fbf7f0;
+  --background-color: #fbf7f0;
   --light-color: #ffe3e1;
   --mid-color: #ffd1d1;
   --action-color: #ff9494;
 }
 
 .nightMode {
-  --lightest-color: #bbe1fa;
+  --background-color: #bbe1fa;
   --light-color: #3282b8;
   --mid-color: #0f4c75;
   --action-color: #1b262c;
@@ -90,7 +90,7 @@ body {
   margin: 0;
   position: relative;
   font-family: 'Lato-Regular', 'Courier New', Courier, monospace;
-  background-color: var(--lightest-color);
+  background-color: var(--background-color);
 }
 
 h1,
@@ -101,14 +101,14 @@ p {
 
 button {
   background-color: var(--action-color);
-  color: var(--lightest-color);
+  color: var(--background-color);
   border: none;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 button:hover {
-  background-color: var(--lightest-color);
+  background-color: var(--background-color);
   color: black;
 }
 
