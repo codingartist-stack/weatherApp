@@ -71,4 +71,75 @@
 :root {
   /* color-scheme */
   margin: 0;
+  scroll-behavior: smooth;
+
+  --warm-lightest-color: #fff5e4;
+  --warm-light-color: #ffe3e1;
+  --warm-mid-color: #ffd1d1;
+  --warm-action-color: #ff9494;
+
+  --cool-lightest-color: #bbe1fa;
+  --cool-light-color: #3282b8;
+  --cool-mid-color: #0f4c75;
+  --cool-action-color: #1b262c;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  font-family: 'Lato-Regular', 'Courier New', Courier, monospace;
+}
+
+h1 {
+  margin: 0;
+}
+
+button {
+  background-color: var(--warm-action-color);
+  color: var(--warm-lightest-color);
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+button:hover {
+  background-color: var(--warm-lightest-color);
+  color: black;
+}
+
+.linearIcon {
+  font-family: 'LinearIcon', 'Courier New', Courier, monospace;
+}
+
+#skipToMainContent {
+  position: absolute;
+  left: 2rem;
+  transform: translateY(-170%);
+  background-color: var(--warm-action-color);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0 0 0.25rem;
+}
+
+#skipToMainContent:focus {
+  transform: translateY(0%);
+  border: none;
+}
+
+.textInput {
+  padding: 0.5em;
+  font-size: medium;
+}
+
+header {
+  background-color: var(--warm-mid-color);
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.searchCityContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }

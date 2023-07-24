@@ -1,11 +1,5 @@
 import _ from 'lodash';
 import './style.css';
-import './images.json';
-
-const check = document.createElement('h2');
-check.textContent = 'Testing Connection hello';
-
-document.body.appendChild(check);
 
 //search specific location
 //toggle fahrenheit or celsius

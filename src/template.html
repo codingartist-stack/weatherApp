@@ -5,5 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%=htmlWebpackPlugin.options.title%></title>
   </head>
-  <body></body>
+  <body>
+    <a href="#mainContent" id="skipToMainContent">Skip Navigation</a>
+    <header>
+      <h1 class="title">what's the weather in:</h1>
+      <div class="searchCityContainer">
+        <input
+          type="text"
+          name="city"
+          id="city"
+          placeholder="type city"
+          class="textInput"
+        />
+        <button id="searchbtn">
+          <span class="linearIcon">magnifier</span>
+        </button>
+      </div>
+    </header>
+    <div class="mainContentContainer" id="mainContent">
+      <div class="weatherContainer" id="weatherContainer"></div>
+    </div>
+  </body>
 </html>
